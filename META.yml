@@ -1,0 +1,36 @@
+---
+abstract: 'notation 3 extensions for RDF::Trine'
+author:
+  - 'Toby Inkster <tobyink@cpan.org>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.61
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.95'
+keywords:
+  - RDF
+  - Trine
+  - N3
+  - 'Notation 3'
+  - 'Semantic Web'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: RDF-TriN3
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  RDF::Trine: 0.126
+  Scalar::Util: 0
+  perl: 5.8.0
+resources:
+  bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3
+  homepage: http://search.cpan.org/dist/RDF-TriN3/
+  license: http://dev.perl.org/licenses/
+  repository: http://goddamn.co.uk/viewvc/perlmods/RDF-TriN3/
+version: 0.126
