@@ -4,9 +4,10 @@ use 5.008;
 use RDF::Trine;
 use RDF::Trine::Node::Formula;
 use RDF::Trine::Parser::Notation3;
+use RDF::Trine::Parser::ShorthandRDF;
 use RDF::Trine::Serializer::Notation3;
 
-our $VERSION = '0.126';
+our $VERSION = '0.128';
 
 1;
 
@@ -30,6 +31,9 @@ This module extends L<RDF::Trine> in three ways:
 
 =back
 
+In addition, a parser is provided for Notation 3 extended with ShorthandRDF
+notation - L<http://esw.w3.org/ShorthandRDF>.
+
 =head1 BUGS AND LIMITATIONS
 
 Implementing N3 logic and the cwm built-ins is considered outside the scope
@@ -45,6 +49,12 @@ may not be supported by all storage engines; additionally top-level variables
 (?foo), and top-level @forSome and @forAll (i.e. not nested inside a formula)
 might cause problems.
 
+RDF::Trine::Store::DBI has some issues with literal subjects, and literal and
+blank node predicates, allowing them to be stored, but not retrieved. From
+version 0.128, RDF::Trine::Store::DBI offers a C<clear_restrictions> method
+that should resolve these issues. RDF::Trine::Store::Memory is fine. Other
+stores are not tested.
+
 Please report any bugs to L<http://rt.cpan.org/>.
 
 =head1 SEE ALSO
@@ -53,9 +63,13 @@ L<RDF::Trine::Node::Formula>,
 L<RDF::Trine::Parser::Notation3>,
 L<RDF::Trine::Serializer::Notation3>.
 
+L<RDF::Trine::Parser::ShorthandRDF>.
+
 L<RDF::Trine>.
 
 L<http://www.perlrdf.org/>.
+
+L<http://www.w3.org/DesignIssues/Notation3>.
 
 =head1 AUTHOR
 

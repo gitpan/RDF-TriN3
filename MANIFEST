@@ -29,4 +29,5 @@ inc/Test/Signature.pm
 lib/RDF/TriN3.pm
 lib/RDF/Trine/Node/Formula.pm
 lib/RDF/Trine/Parser/Notation3.pm
+lib/RDF/Trine/Parser/ShorthandRDF.pm
 lib/RDF/Trine/Serializer/Notation3.pm

@@ -25,7 +25,7 @@ no_index:
     - inc
     - t
 requires:
-  RDF::Trine: 0.126
+  RDF::Trine: 0.128
   Scalar::Util: 0
   perl: 5.8.0
 resources:
@@ -33,4 +33,4 @@ resources:
   homepage: http://search.cpan.org/dist/RDF-TriN3/
   license: http://dev.perl.org/licenses/
   repository: http://goddamn.co.uk/viewvc/perlmods/RDF-TriN3/
-version: 0.126
+version: 0.128

@@ -14,7 +14,7 @@ readme_from         $fn;
 author              'Toby Inkster <tobyink@cpan.org>';
 license             'perl';
 
-requires            'RDF::Trine'         => '0.126';
+requires            'RDF::Trine'         => '0.128';
 requires            'Scalar::Util'       => 0;
 test_requires       'Test::More'         => '0.61';
 

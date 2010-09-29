@@ -23,7 +23,7 @@ use Scalar::Util qw(blessed);
 
 our ($VERSION);
 BEGIN {
-	$VERSION	= '0.126';
+	$VERSION	= '0.128';
 }
 
 ######################################################################
@@ -32,7 +32,7 @@ BEGIN {
 
 Formulae are implemented as a subclass of literals. Parts of Trine that have no special
 knowledge about formulae (e.g. the Turtle serialiser) will just see them as literals
-with a particular datatype URI (http://open.vocab.org/terms/Formula).s
+with a particular datatype URI (http://open.vocab.org/terms/Formula).
 
 If your code needs to detect formulae nodes, try:
 
@@ -70,7 +70,8 @@ sub new {
 	} else {
 		my $p    = RDF::Trine::Parser::Notation3->new;
 		my $base = shift;
-		return $p->parse_formula($base, $pattern);
+		my $r    = $p->parse_formula($base, $pattern);
+		return $r;
 	}
 }
 

@@ -10,5 +10,11 @@ Home page:    <http://search.cpan.org/dist/RDF-TriN3/>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.128 [2010-09-29]
+ - Added more test cases.
+ - (Addition) RDF::Trine::Parser::ShorthandRDF
+ - (Bugfix) RDF::Trine::Parser::Notation3::parse_formula works.
+ - (Bugfix) RDF::Trine::Store::DBI compatibility note.
+
 0.126 [2010-08-17]
 

@@ -10,6 +10,9 @@ DESCRIPTION
 
     *   Provides a subclass of literals to represent Notation 3 formulae.
 
+    In addition, a parser is provided for Notation 3 extended with
+    ShorthandRDF notation - <http://esw.w3.org/ShorthandRDF>.
+
 BUGS AND LIMITATIONS
     Implementing N3 logic and the cwm built-ins is considered outside the
     scope of this module, though I am interested in doing that as part of a
@@ -24,15 +27,25 @@ BUGS AND LIMITATIONS
     engines; additionally top-level variables (?foo), and top-level @forSome
     and @forAll (i.e. not nested inside a formula) might cause problems.
 
+    RDF::Trine::Store::DBI has some issues with literal subjects, and
+    literal and blank node predicates, allowing them to be stored, but not
+    retrieved. From version 0.128, RDF::Trine::Store::DBI offers a
+    "clear_restrictions" method that should resolve these issues.
+    RDF::Trine::Store::Memory is fine. Other stores are not tested.
+
     Please report any bugs to <http://rt.cpan.org/>.
 
 SEE ALSO
     RDF::Trine::Node::Formula, RDF::Trine::Parser::Notation3,
     RDF::Trine::Serializer::Notation3.
 
+    RDF::Trine::Parser::ShorthandRDF.
+
     RDF::Trine.
 
     <http://www.perlrdf.org/>.
+
+    <http://www.w3.org/DesignIssues/Notation3>.
 
 AUTHOR
     Toby Inkster <tobyink@cpan.org>.

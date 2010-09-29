@@ -36,7 +36,7 @@ use Scalar::Util qw(blessed looks_like_number);
 our ($VERSION, $rdf, $xsd, $logic, $owl);
 
 BEGIN {
-	$VERSION = '0.126';
+	$VERSION = '0.128';
 	$RDF::Trine::Parser::parser_names{ 'notation3' }   = __PACKAGE__;
 	$RDF::Trine::Parser::parser_names{ 'notation 3' }   = __PACKAGE__;
 	my $class = __PACKAGE__;
@@ -332,7 +332,7 @@ sub _verb {
 	} elsif ($self->_test('=')) {
 		$self->_eat('=');
 		return [ $owl->sameAs, 0 ];
-	} elsif ($self->_test('a')) {
+	} elsif ($self->{tokens} =~ m'^a\b') {
 		$self->_eat('a');
 		return [ $rdf->type , 0 ];
 	} elsif ($self->_predicate_test()) {
@@ -437,11 +437,11 @@ sub _formula {
 	local($self->{handle_forall})  = sub { push @forAll, $_[0]; };
 	
 	$self->_eat('{');
+	
 	while (!$self->_test('}')) {
 		$self->__consume_ws;
 		
-		STATEMENTLIST: while ($self->_triples_test || $self->_directive_test()) {
-			
+		STATEMENTLIST: while ($self->_triples_test || $self->_directive_test()) {			
 			if ($self->_triples_test) {
 				$self->_triples;
 				$self->__consume_ws;
@@ -463,9 +463,11 @@ sub _formula {
 	$self->_eat('}');
 	
 	# return a formula. can it really be that easy?
+	#warn Dumper([@triples]) . " being saved as a Formula\n";
 	my $formula = RDF::Trine::Node::Formula->new( RDF::Trine::Pattern->new(@triples) );
-	$formula->forAll(@forAll);
-	$formula->forSome(@forSome);
+	#warn Dumper($formula);
+	$formula->[3] = \@forAll;
+	$formula->[4] = \@forSome;
 	return $formula;
 }
 
@@ -480,14 +482,11 @@ sub parse_formula {
 	my $self  = shift;
 	my $uri   = shift;
 	my $input = shift;
-	my @triples;
 	
-	local($self->{handle_triple})  = sub { push @triples, $_[0]; };
 	local($self->{baseURI}) = $uri;
 	local($self->{tokens})  = "{ ".$input." }";
-	$self->_formula;
 	
-	return RDF::Trine::Node::Formula->new( RDF::Trine::Pattern->new(@triples) );
+	return $self->_formula;
 }
 
 1;
