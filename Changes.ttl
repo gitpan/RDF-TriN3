@@ -48,6 +48,19 @@ my:v_0-128
 		dcs:item   [ rdfs:label "RDF::Trine::Store::DBI compatibility note."@en ; a dcs:Bugfix ]
 		] .
 
+my:v_0-129
+
+	a               :Version ;
+	dc:issued       "2010-10-04"^^xsd:date ;
+	:revision       "0.129"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.129.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_0-129 ;
+	dcs:changeset [
+		dcs:versus my:v_0-128 ;
+		dcs:item   [ rdfs:label "Changed ShorthandRDF syntax."@en ]
+		] .
+
 #############################################################
 
 my:project
@@ -66,7 +79,7 @@ my:project
 	:tester         toby:i ;
 	:created        "2010-07-02"^^xsd:date ;
 	:license        <http://dev.perl.org/licenses/> ;
-	:release        my:v_0-126 , my:v_0-128 .
+	:release        my:v_0-126 , my:v_0-128 , my:v_0-129 .
 
 #############################################################
 

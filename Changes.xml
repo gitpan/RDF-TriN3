@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF xmlns:dbug="http://ontologi.es/doap-bugs#" xmlns:dc="http://purl.org/dc/terms/" xmlns:dcs="http://ontologi.es/doap-changeset#" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-<rdf:Description rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r0">
-	<dcs:item rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r1"/>
-	<dcs:item rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r2"/>
-	<dcs:item rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r3"/>
-	<dcs:item rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r4"/>
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr0">
+	<dcs:item rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr1"/>
+	<dcs:item rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr2"/>
+	<dcs:item rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr3"/>
+	<dcs:item rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr4"/>
 	<dcs:versus rdf:resource="http://purl.org/NET/cpan-uri/dist/RDF-TriN3/v_0-126"/>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r1">
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr1">
 	<rdfs:label xml:lang="en">Added more test cases.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r2">
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr2">
 	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#Addition"/>
 	<rdfs:label xml:lang="en">RDF::Trine::Parser::ShorthandRDF</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r3">
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr3">
 	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#Bugfix"/>
 	<rdfs:label xml:lang="en">RDF::Trine::Parser::Notation3::parse_formula works.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r4">
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr4">
 	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#Bugfix"/>
 	<rdfs:label xml:lang="en">RDF::Trine::Store::DBI compatibility note.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r5">
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr5">
+	<dcs:item rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr6"/>
+	<dcs:versus rdf:resource="http://purl.org/NET/cpan-uri/dist/RDF-TriN3/v_0-128"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr6">
+	<rdfs:label xml:lang="en">Changed ShorthandRDF syntax.</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr7">
 	<doap:browse rdf:resource="http://goddamn.co.uk/viewvc/perlmods/RDF-TriN3/"/>
 	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#SVNRepository"/>
 </rdf:Description>
@@ -45,7 +52,8 @@
 	<doap:programming-language>Perl</doap:programming-language>
 	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/RDF-TriN3/v_0-126"/>
 	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/RDF-TriN3/v_0-128"/>
-	<doap:repository rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r5"/>
+	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/RDF-TriN3/v_0-129"/>
+	<doap:repository rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr7"/>
 	<doap:shortdesc xml:lang="en">notation 3 extensions for RDF::Trine</doap:shortdesc>
 	<doap:tester rdf:resource="http://tobyinkster.co.uk/#i"/>
 	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
@@ -59,11 +67,19 @@
 	<rdfs:comment xml:lang="en">Original version</rdfs:comment>
 </rdf:Description>
 <rdf:Description xmlns:ns1="http://purl.org/NET/cpan-uri/terms#" rdf:about="http://purl.org/NET/cpan-uri/dist/RDF-TriN3/v_0-128">
-	<dcs:changeset rdf:nodeID="r9D914578CC0611DF9F12ED76EF3F1F40r0"/>
+	<dcs:changeset rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr0"/>
 	<ns1:compatible_with rdf:resource="http://purl.org/NET/cpan-uri/dist/RDF-Trine/v_0-128"/>
 	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-09-29</dc:issued>
 	<doap:file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.128.tar.gz"/>
 	<doap:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.128</doap:revision>
+	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
+</rdf:Description>
+<rdf:Description xmlns:ns1="http://purl.org/NET/cpan-uri/terms#" rdf:about="http://purl.org/NET/cpan-uri/dist/RDF-TriN3/v_0-129">
+	<dcs:changeset rdf:nodeID="r6CE06C96CFF911DFA0FF9516E7574B9Fr5"/>
+	<ns1:compatible_with rdf:resource="http://purl.org/NET/cpan-uri/dist/RDF-Trine/v_0-129"/>
+	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-04</dc:issued>
+	<doap:file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.129.tar.gz"/>
+	<doap:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.129</doap:revision>
 	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
 </rdf:Description>
 <rdf:Description xmlns:ns1="http://www.w3.org/2002/07/owl#" rdf:about="http://tobyinkster.co.uk/#i">
