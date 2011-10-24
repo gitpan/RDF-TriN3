@@ -9,6 +9,7 @@ RDF::Trine::Node::Formula - RDF Node class for formulae / graph literals
 
 package RDF::Trine::Node::Formula;
 
+use 5.010;
 use strict;
 use warnings;
 no warnings 'redefine';
@@ -23,7 +24,7 @@ use Scalar::Util qw(blessed);
 
 our ($VERSION);
 BEGIN {
-	$VERSION	= '0.129';
+	$VERSION	= '0.136';
 }
 
 ######################################################################
@@ -241,13 +242,19 @@ Toby Inkster  C<< <tobyink@cpan.org> >>
 
 Based on RDF::Trine::Node::Literal by Gregory Todd Williams. 
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENCE
 
 Copyright (c) 2006-2010 Gregory Todd Williams. 
 
-Copyright (c) 2010 Toby Inkster.
+Copyright (c) 2010-2011 Toby Inkster.
 
-All rights reserved. This program is free software; you can redistribute
-it and/or modify it under the same terms as Perl itself.
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=head1 DISCLAIMER OF WARRANTIES
+
+THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut

@@ -31,6 +31,7 @@ Notation 3 parser and serialiser (the parser will give you warnings about this).
 
 package RDF::Trine::Serializer::Notation3;
 
+use 5.010;
 use strict;
 use warnings;
 use base qw(RDF::Trine::Serializer::NTriples);
@@ -39,7 +40,7 @@ use base qw(RDF::Trine::Serializer::NTriples);
 
 our ($VERSION);
 BEGIN {
-	$VERSION	= '0.129';
+	$VERSION	= '0.136';
 	$RDF::Trine::Serializer::serializer_names{ 'notation3' } = __PACKAGE__;
 	$RDF::Trine::Serializer::serializer_names{ 'notation 3' } = __PACKAGE__;
 	foreach my $type (qw(text/n3)) {
@@ -134,9 +135,17 @@ L<http://www.w3.org/TR/rdf-testcases/#ntriples>
 
 Toby Inkster  C<< <tobyink@cpan.org> >>
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENCE
 
-Copyright (c) 2010 Toby Inkster. All rights reserved. This program is free software;
-you can redistribute it and/or modify it under the same terms as Perl itself.
+Copyright (c) 2010-2011 Toby Inkster.
+
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=head1 DISCLAIMER OF WARRANTIES
+
+THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut

@@ -21,34 +21,49 @@ This package exposes the standard RDF::Trine::Parser methods, plus:
 
 package RDF::Trine::Parser::Notation3;
 
+use 5.010;
 use strict;
 use warnings;
 no warnings 'redefine';
 no warnings 'once';
 use base qw(RDF::Trine::Parser::Turtle);
+use Data::UUID;
 use RDF::Trine qw(literal);
 use RDF::Trine::Statement;
-use RDF::Trine::Namespace;
+use RDF::Trine::Namespace qw[rdf rdfs owl xsd];
 use RDF::Trine::Node;
 use RDF::Trine::Error;
 use Scalar::Util qw(blessed looks_like_number);
 
-our ($VERSION, $rdf, $xsd, $logic, $owl);
+our ($VERSION, $AUTHORITY);
 
-BEGIN {
-	$VERSION = '0.129';
-	$RDF::Trine::Parser::parser_names{ 'notation3' }   = __PACKAGE__;
-	$RDF::Trine::Parser::parser_names{ 'notation 3' }   = __PACKAGE__;
+BEGIN 
+{
+	$VERSION   = '0.136';
+	$AUTHORITY = 'cpan:TOBYINK';
+	
 	my $class = __PACKAGE__;
-	$RDF::Trine::Parser::encodings{ $class } = 'utf8';
-	foreach my $type (qw(text/n3 text/rdf+n3)) {
-		$RDF::Trine::Parser::media_types{ $type } = __PACKAGE__;
-	}
+	$RDF::Trine::Parser::encodings{$class } = 'utf8';
+	$RDF::Trine::Parser::canonical_media_types{ $class } = 'text/n3';
+	
+	$RDF::Trine::Parser::parser_names{$_} = __PACKAGE__
+		foreach ('notation3', 'notation 3', 'n3');
+	
+	$RDF::Trine::Parser::media_types{$_} = __PACKAGE__
+		foreach qw(text/n3 text/rdf+n3);
+	
+	$RDF::Trine::Parser::file_extensions{$_} = __PACKAGE__
+		foreach qw(n3);
 
-	$rdf			= RDF::Trine::Namespace->new('http://www.w3.org/1999/02/22-rdf-syntax-ns#');
-	$xsd			= RDF::Trine::Namespace->new('http://www.w3.org/2001/XMLSchema#');
-	$logic      = RDF::Trine::Namespace->new('http://www.w3.org/2000/10/swap/log#');
-	$owl        = RDF::Trine::Namespace->new('http://www.w3.org/2002/07/owl#');
+	$RDF::Trine::Parser::format_uris{$_} = __PACKAGE__
+		foreach ('http://www.w3.org/ns/formats/N3');
+}
+
+our ($logic);
+
+BEGIN
+{
+	$logic = RDF::Trine::Namespace->new('http://www.w3.org/2000/10/swap/log#');
 }
 
 # Force the default prefix to be bound to the base URI.
@@ -223,6 +238,13 @@ sub _predicateObjectList {
 		$self->_eat('is');
 		$self->__consume_ws;
 	}
+	elsif ($self->{'tokens'} =~ /^has\b/
+	and grep {$_ eq 'has'} @{$self->{'keywords'}})
+	{
+		$self->_eat('has');
+		$self->__consume_ws;
+	}
+	
 	
 	my ($pred, $reverse) = @{ $self->_verb() };
 	$self->_ws();
@@ -501,13 +523,19 @@ Toby Inkster  C<< <tobyink@cpan.org> >>
 
 Based on RDF::Trine::Parser::Turtle by Gregory Todd Williams. 
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENCE
 
 Copyright (c) 2006-2010 Gregory Todd Williams. 
 
-Copyright (c) 2010 Toby Inkster.
+Copyright (c) 2010-2011 Toby Inkster.
 
-All rights reserved. This program is free software; you can redistribute
-it and/or modify it under the same terms as Perl itself.
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=head1 DISCLAIMER OF WARRANTIES
+
+THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut

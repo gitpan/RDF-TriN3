@@ -1,5 +1,3 @@
-#############################################################
-
 @prefix :        <http://usefulinc.com/ns/doap#> .
 @prefix cpant:   <http://purl.org/NET/cpan-uri/terms#> .
 @prefix dcs:     <http://ontologi.es/doap-changeset#> .
@@ -11,19 +9,8 @@
 @prefix trine:   <http://purl.org/NET/cpan-uri/dist/RDF-Trine/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-#############################################################
-
-<>
-
-	dc:title         "Changes" ;
-	dc:description   "Revision history for Perl extension RDF::TriN3."@en ;
-	dc:subject       my:project ;
-	dc:creator       toby:i .
-
-#############################################################
-
+my:project :release my:v_0-126 .
 my:v_0-126
-
 	a               :Version ;
 	dc:issued       "2010-08-17"^^xsd:date ;
 	:revision       "0.126"^^xsd:string ;
@@ -32,8 +19,8 @@ my:v_0-126
 	cpant:compatible_with
 	                trine:v_0-126 .
 
+my:project :release my:v_0-128 .
 my:v_0-128
-
 	a               :Version ;
 	dc:issued       "2010-09-29"^^xsd:date ;
 	:revision       "0.128"^^xsd:string ;
@@ -48,8 +35,8 @@ my:v_0-128
 		dcs:item   [ rdfs:label "RDF::Trine::Store::DBI compatibility note."@en ; a dcs:Bugfix ]
 		] .
 
+my:project :release my:v_0-129 .
 my:v_0-129
-
 	a               :Version ;
 	dc:issued       "2010-10-04"^^xsd:date ;
 	:revision       "0.129"^^xsd:string ;
@@ -61,35 +48,23 @@ my:v_0-129
 		dcs:item   [ rdfs:label "Changed ShorthandRDF syntax."@en ]
 		] .
 
-#############################################################
-
-my:project
-
-	a               :Project ;
-	:name           "RDF-TriN3" ;
-	:shortdesc      "notation 3 extensions for RDF::Trine"@en ;
-	:programming-language  "Perl" ;
-	:homepage       <http://search.cpan.org/dist/RDF-TriN3/> ;
-	:download-page  <http://search.cpan.org/dist/RDF-TriN3/> ;
-	:bug-database   <http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3> ;
-	:repository     [ a :SVNRepository ; :browse <http://goddamn.co.uk/viewvc/perlmods/RDF-TriN3/> ] ;
-	:maintainer     toby:i ;
-	:developer      toby:i ;
-	:documenter     toby:i ;
-	:tester         toby:i ;
-	:created        "2010-07-02"^^xsd:date ;
-	:license        <http://dev.perl.org/licenses/> ;
-	:release        my:v_0-126 , my:v_0-128 , my:v_0-129 .
-
-#############################################################
-
-toby:i
-
-	a               foaf:Person ;
-	foaf:name       "Toby Inkster" ;
-	foaf:homepage   <http://tobyinkster.co.uk/> ;
-	foaf:page       <http://search.cpan.org/~tobyink/> ;
-	foaf:mbox       <mailto:tobyink@cpan.org> ;
-	<http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/NET/cpan-uri/person/tobyink> .
-
-#############################################################
+my:project :release my:v_0-136 .
+my:v_0-136
+	a               :Version ;
+	dc:issued       "2011-10-24"^^xsd:date ;
+	:revision       "0.136"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.136.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_0-136 ;
+	rdfs:label      "Happy Birthday"@en ;
+	dcs:changeset [
+		dcs:versus my:v_0-129 ;
+		dcs:item   [ rdfs:label "ShorthandRDF how has @import and @profile directives."@en  ; a dcs:Addition ] ;
+		dcs:item   [ rdfs:label "Add format URIs to ShorthandRDF and N3 parsers."@en  ; a dcs:Update ] ;
+		dcs:item   [ rdfs:label "Add file extensions to ShorthandRDF and N3 parsers."@en  ; a dcs:Update ] ;
+		dcs:item   [ rdfs:label "N3 Parser now supports 'has' keyword (essentially a no-op)."@en ; a dcs:Addition ] ;
+		dcs:item   [ rdfs:label "use 5.010"@en ; a dcs:Update ] ;
+		dcs:item   [ rdfs:label "Module::Package::RDF"@en ; a dcs:Packaging ] ;
+		dcs:item   [ rdfs:label "Copyright 2011."@en ; a dcs:Documentation ]
+		] .
+		
