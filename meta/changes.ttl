@@ -68,3 +68,17 @@ my:v_0-136
 		dcs:item   [ rdfs:label "Copyright 2011."@en ; a dcs:Documentation ]
 		] .
 		
+my:project :release my:v_0-200 .
+my:v_0-200
+	a               :Version ;
+	dc:issued       "2012-07-04"^^xsd:date ;
+	:revision       "0.200"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.200.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_1-000 ;
+	dcs:changeset [
+		dcs:versus my:v_0-136 ;
+		dcs:item   [ rdfs:label "RDF::TrineX::Parser::Pretdsl"@en ; a dcs:Addition ] ;
+		dcs:item   [ rdfs:label "Copyright 2012."@en ; a dcs:Documentation ]
+	] .
+		

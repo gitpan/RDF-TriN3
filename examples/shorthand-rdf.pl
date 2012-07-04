@@ -10,11 +10,25 @@ my $n3 = <<'NOTATION3';
 @pattern    "(\d{1,2})(?<month>[A-Z][a-z]{2})(\d{4})" <$3/$2/$1> .
 @base <http://example.org/> .
 @term lit <#as_literal> .
-@import <http://buzzword.org.uk/2011/test.n3> .
+#@import <http://buzzword.org.uk/2011/test.n3> .
 
-1Apr2003 lit 1apr2003 ; <foo> <bar> .
-<> dc:creator tobyink .
-tobyink foaf:name "Toby Inkster" .
+#1Apr2003 lit 1apr2003 ; <foo> <bar> .
+#<> dc:creator tobyink .
+#tobyink foaf:name "Toby Inkster" .
+
+<foo> = { :a :b :c . } .
+[] a :Blah .
+@pragma trig true .
+<bar> = { :a :b :c . } .
+@pragma trig false .
+<baz> = { :a :b :c . } .
+
+@pragma rdf true .
+@pragma rdf 1 .
+"Toby" :is_my :name .
+
+@pragma blank-nodes false .
+[] :is_my :name .
 
 NOTATION3
 

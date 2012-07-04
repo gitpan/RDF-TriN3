@@ -7,7 +7,7 @@ use RDF::Trine::Parser::Notation3;
 use RDF::Trine::Parser::ShorthandRDF;
 use RDF::Trine::Serializer::Notation3;
 
-our $VERSION = '0.136';
+our $VERSION = '0.200';
 
 1;
 
@@ -37,8 +37,8 @@ notation - L<http://esw.w3.org/ShorthandRDF>.
 =head1 BUGS AND LIMITATIONS
 
 Implementing N3 logic and the cwm built-ins is considered outside the scope
-of this module, though I am interested in doing that as part of a separate
-project.
+of this distribution, though I am interested in doing that as part of a
+separate project.
 
 RDF::TriN3 currently relies entirely on RDF::Trine to provide implementations
 of the concept of graphs, and storage. Thus any graphs that can't be
@@ -63,7 +63,8 @@ L<RDF::Trine::Node::Formula>,
 L<RDF::Trine::Parser::Notation3>,
 L<RDF::Trine::Serializer::Notation3>.
 
-L<RDF::Trine::Parser::ShorthandRDF>.
+L<RDF::Trine::Parser::ShorthandRDF>,
+L<RDF::Trine::Parser::Pretdsl>.
 
 L<RDF::Trine>.
 
@@ -77,7 +78,7 @@ Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
 =head1 COPYRIGHT AND LICENCE
 
-Copyright 2010-2011 Toby Inkster
+Copyright 2010-2012 Toby Inkster
 
 This library is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

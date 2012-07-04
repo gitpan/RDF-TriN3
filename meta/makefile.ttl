@@ -9,6 +9,7 @@
 	:test_requires
 		"Test::More 0.61" ;
 	:requires 
+		"parent" ,
 		"Data::UUID" ,
 		"RDF::Trine 0.135" ,
 		"Scalar::Util" ,

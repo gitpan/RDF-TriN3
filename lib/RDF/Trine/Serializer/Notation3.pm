@@ -1,46 +1,15 @@
-=head1 NAME
-
-RDF::Trine::Serializer::Notation3 - Notation 3 Serializer
-
-=head1 SYNOPSIS
-
- use RDF::Trine::Serializer::Notation3;
- my $serializer	= RDF::Trine::Serializer::Notation3->new();
-
-=head1 DESCRIPTION
-
-The RDF::Trine::Serializer::Notation3 class provides an API for serializing RDF
-graphs to the Notation 3 syntax.
-
-The output of this class is not optimised for human-readability; it's a data dump.
-The only minor concession it makes to human readers is that it will nicely indent
-formulae. I do have plans to port cwm's Notation 3 output to Perl, but this is likely
-to be distributed separately due to licensing concerns.
-
-I<Caveat scriptor:> while RDF::Trine::Node::Formula understands quantification
-(@forAll, @forSome), RDF::Trine::Model does not. This means that @forAll and
-@forSome defined in the top-level graph are not-round-tripped between the
-Notation 3 parser and serialiser (the parser will give you warnings about this).
-@forAll and @forSome within formulae will work fine.
-
-=head1 METHODS
-
-=over 4
-
-=cut
-
 package RDF::Trine::Serializer::Notation3;
 
 use 5.010;
 use strict;
 use warnings;
-use base qw(RDF::Trine::Serializer::NTriples);
+use parent qw(RDF::Trine::Serializer::NTriples);
 
 ######################################################################
 
 our ($VERSION);
 BEGIN {
-	$VERSION	= '0.136';
+	$VERSION	= '0.200';
 	$RDF::Trine::Serializer::serializer_names{ 'notation3' } = __PACKAGE__;
 	$RDF::Trine::Serializer::serializer_names{ 'notation 3' } = __PACKAGE__;
 	foreach my $type (qw(text/n3)) {
@@ -51,30 +20,6 @@ BEGIN {
 ######################################################################
 
 # these are inherited from RDF::Trine::Serializer::NTriples.
-
-=item C<< new >>
-
-Returns a new Notation 3 serializer object.
-
-=item C<< serialize_model_to_file ( $fh, $model ) >>
-
-Serializes the C<$model> to Notation 3, printing the results to the supplied
-filehandle C<<$fh>>.
-
-=item C<< serialize_model_to_string ( $model ) >>
-
-Serializes the C<$model> to Notation 3, returning the result as a string.
-
-=item C<< serialize_iterator_to_file ( $file, $iter ) >>
-
-Serializes the iterator to Notation 3, printing the results to the supplied
-filehandle C<<$fh>>.
-
-=item C<< serialize_iterator_to_string ( $iter ) >>
-
-Serializes the iterator to Notation 3, returning the result as a string.
-
-=cut
 
 sub _node_as_string {
 	my $self = shift;
@@ -125,11 +70,74 @@ sub _formula_as_string {
 
 __END__
 
+=head1 NAME
+
+RDF::Trine::Serializer::Notation3 - Notation 3 Serializer
+
+=head1 SYNOPSIS
+
+ use RDF::Trine::Serializer::Notation3;
+ my $serializer	= RDF::Trine::Serializer::Notation3->new();
+
+=head1 DESCRIPTION
+
+The RDF::Trine::Serializer::Notation3 class provides an API for serializing RDF
+graphs to the Notation 3 syntax.
+
+The output of this class is not optimised for human-readability; it's a data dump.
+The only minor concession it makes to human readers is that it will nicely indent
+formulae. I do have plans to port cwm's Notation 3 output to Perl, but this is likely
+to be distributed separately due to licensing concerns.
+
+I<Caveat scriptor:> while RDF::Trine::Node::Formula understands quantification
+(@forAll, @forSome), RDF::Trine::Model does not. This means that @forAll and
+@forSome defined in the top-level graph are not-round-tripped between the
+Notation 3 parser and serialiser (the parser will give you warnings about this).
+@forAll and @forSome within formulae will work fine.
+
+=head2 Constructor
+
+=over
+
+=item C<< new >>
+
+Returns a new Notation 3 serializer object.
+
 =back
+
+=head2 Methods
+
+=over
+
+=item C<< serialize_model_to_file ( $fh, $model ) >>
+
+Serializes the C<$model> to Notation 3, printing the results to the supplied
+filehandle C<<$fh>>.
+
+=item C<< serialize_model_to_string ( $model ) >>
+
+Serializes the C<$model> to Notation 3, returning the result as a string.
+
+=item C<< serialize_iterator_to_file ( $file, $iter ) >>
+
+Serializes the iterator to Notation 3, printing the results to the supplied
+filehandle C<<$fh>>.
+
+=item C<< serialize_iterator_to_string ( $iter ) >>
+
+Serializes the iterator to Notation 3, returning the result as a string.
+
+=back
+
+=head1 BUGS
+
+Please report any bugs to
+L<http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3>.
 
 =head1 SEE ALSO
 
-L<http://www.w3.org/TR/rdf-testcases/#ntriples>
+L<RDF::Trine::Serializer::NTriples>,
+L<RDF::Trine::Serializer::Turtle>.
 
 =head1 AUTHOR
 
@@ -137,7 +145,7 @@ Toby Inkster  C<< <tobyink@cpan.org> >>
 
 =head1 COPYRIGHT AND LICENCE
 
-Copyright (c) 2010-2011 Toby Inkster.
+Copyright (c) 2010-2012 Toby Inkster.
 
 This library is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -15,8 +15,8 @@ DESCRIPTION
 
 BUGS AND LIMITATIONS
     Implementing N3 logic and the cwm built-ins is considered outside the
-    scope of this module, though I am interested in doing that as part of a
-    separate project.
+    scope of this distribution, though I am interested in doing that as part
+    of a separate project.
 
     RDF::TriN3 currently relies entirely on RDF::Trine to provide
     implementations of the concept of graphs, and storage. Thus any graphs
@@ -39,7 +39,7 @@ SEE ALSO
     RDF::Trine::Node::Formula, RDF::Trine::Parser::Notation3,
     RDF::Trine::Serializer::Notation3.
 
-    RDF::Trine::Parser::ShorthandRDF.
+    RDF::Trine::Parser::ShorthandRDF, RDF::Trine::Parser::Pretdsl.
 
     RDF::Trine.
 
@@ -51,7 +51,7 @@ AUTHOR
     Toby Inkster <tobyink@cpan.org>.
 
 COPYRIGHT AND LICENCE
-    Copyright 2010-2011 Toby Inkster
+    Copyright 2010-2012 Toby Inkster
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

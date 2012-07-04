@@ -6,16 +6,20 @@ Home page:    <https://metacpan.org/release/RDF-TriN3>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
-0.136  2011-10-24
-# Happy Birthday
+0.200  2012-07-04
 
- - (Packaging) Module::Package::RDF
- - (Update) Add format URIs to ShorthandRDF and N3 parsers.
+ - (Addition) RDF::TrineX::Parser::Pretdsl
+ - (Documentation) Copyright 2012.
+
+0.136  2011-10-24  # Happy Birthday
+
+ - (Addition) N3 Parser now supports 'has' keyword (essentially a no-op).
  - (Addition) ShorthandRDF how has @import and @profile directives.
  - (Documentation) Copyright 2011.
+ - (Packaging) Module::Package::RDF
  - (Update) Add file extensions to ShorthandRDF and N3 parsers.
+ - (Update) Add format URIs to ShorthandRDF and N3 parsers.
  - (Update) use 5.010
- - (Addition) N3 Parser now supports 'has' keyword (essentially a no-op).
 
 0.129  2010-10-04
 
@@ -23,10 +27,10 @@ Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
 0.128  2010-09-29
 
- - Added more test cases.
  - (Addition) RDF::Trine::Parser::ShorthandRDF
  - (Bugfix) RDF::Trine::Parser::Notation3::parse_formula works.
  - (Bugfix) RDF::Trine::Store::DBI compatibility note.
+ - Added more test cases.
 
 0.126  2010-08-17
 

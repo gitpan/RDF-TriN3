@@ -1,66 +1,20 @@
-# RDF::Trine::Node::Formula
-# -----------------------------------------------------------------------------
-
-=head1 NAME
-
-RDF::Trine::Node::Formula - RDF Node class for formulae / graph literals
-
-=cut
-
 package RDF::Trine::Node::Formula;
 
 use 5.010;
 use strict;
 use warnings;
 no warnings 'redefine';
-use base qw(RDF::Trine::Node::Literal);
+use parent qw(RDF::Trine::Node::Literal);
 
 use RDF::Trine::Error;
 use RDF::Trine::Pattern;
 use RDF::Trine::Parser::Notation3;
 use Scalar::Util qw(blessed);
 
-######################################################################
-
 our ($VERSION);
 BEGIN {
-	$VERSION	= '0.136';
+	$VERSION	= '0.200';
 }
-
-######################################################################
-
-=head1 DESCRIPTION
-
-Formulae are implemented as a subclass of literals. Parts of Trine that have no special
-knowledge about formulae (e.g. the Turtle serialiser) will just see them as literals
-with a particular datatype URI (http://open.vocab.org/terms/Formula).
-
-If your code needs to detect formulae nodes, try:
-
-  use Scalar::Util qw[blessed];
-  if (blessed($node) && $node->isa('RDF::Trine::Node::Formula'))
-    { ... do stuff to formulae ... }
-
-or perhaps
-
-  use Scalar::Util qw[blessed];
-  if (blessed($node) && $node->can('pattern'))
-    { ... do stuff to formulae ... }
-
-=head1 METHODS
-
-=over 4
-
-=cut
-
-=item C<new ( $pattern )>
-
-Returns a new Formula structure. This is a subclass of RDF::Trine::Node::Literal.
-
-$pattern is an RDF::Trine::Pattern or a string capable of being parsed with
-RDF::Trine::Parser::Notation3->parse_formula.
-
-=cut
 
 sub new {
 	my $class   = shift;
@@ -84,12 +38,6 @@ sub literal_value {
 	return $self->as_literal_notation;
 }
 
-=item C<< pattern ( $node ) >>
-
-Returns the formula as an RDF::Trine::Pattern.
-
-=cut
-
 sub pattern {
 	my $self	= shift;
 	if (@_) {
@@ -97,14 +45,6 @@ sub pattern {
 	}
 	return $self->[0];
 }
-
-=item C<< forAll >>
-
-Returns the a list of nodes with the @forAll quantifier.
-
-This is a fairly obscure bit of N3 semantics.
-
-=cut
 
 sub forAll {
 	my $self	= shift;
@@ -114,14 +54,6 @@ sub forAll {
 	return unless $self->[3];
 	return @{ $self->[3] };
 }
-
-=item C<< forSome >>
-
-Returns the a list of nodes with the @forSome quantifier.
-
-This is a fairly obscure bit of N3 semantics.
-
-=cut
 
 sub forSome {
 	my $self	= shift;
@@ -164,15 +96,6 @@ sub has_datatype {
 	return 1;
 }
 
-=item C<< as_literal_notation >>
-
-Returns the formula in Notation-3-like syntax, excluding the wrapping "{"..."}".
-
-Uses absolute URIs whenever possible, avoiding relative URI references,
-QNames and keywords.
-
-=cut
-
 sub as_literal_notation {
 	my $self = shift;
 	my $n3   = '';
@@ -195,12 +118,6 @@ sub as_literal_notation {
 	return $n3;
 }
 
-=item C<< from_literal_notation ( $string, $base ) >>
-
-Modifies the formula's value using Notation 3 syntax, excluding the wrapping "{"..."}".
-
-=cut
-
 sub from_literal_notation {
 	my $self = shift;
 	my $new  = __PACKAGE__->new(@_);
@@ -209,14 +126,6 @@ sub from_literal_notation {
 	$self->[4] = [ $new->forSome ];
 	return $self;
 }
-
-=item C<< equal ( $node ) >>
-
-Returns true if the two nodes are equal, false otherwise.
-
-TODO - really need a "not equal, but equivalent" method.
-
-=cut
 
 sub equal {
 	my ($a, $b) = @_;
@@ -234,7 +143,89 @@ sub _compare {
 
 __END__
 
+=head1 NAME
+
+RDF::Trine::Node::Formula - RDF Node class for formulae / graph literals
+
+=head1 DESCRIPTION
+
+Formulae are implemented as a subclass of literals. Parts of Trine that have no special
+knowledge about formulae (e.g. the Turtle serialiser) will just see them as literals
+with a particular datatype URI (http://open.vocab.org/terms/Formula).
+
+If your code needs to detect formulae nodes, try:
+
+  use Scalar::Util qw[blessed];
+  if (blessed($node) && $node->isa('RDF::Trine::Node::Formula'))
+    { ... do stuff to formulae ... }
+
+or perhaps
+
+  use Scalar::Util qw[blessed];
+  if (blessed($node) && $node->can('pattern'))
+    { ... do stuff to formulae ... }
+
+=head1 Constructor
+
+=over
+
+=item C<new ( $pattern )>
+
+Returns a new Formula structure. This is a subclass of RDF::Trine::Node::Literal.
+
+$pattern is an RDF::Trine::Pattern or a string capable of being parsed with
+RDF::Trine::Parser::Notation3->parse_formula.
+
 =back
+
+=head1 Methods
+
+=over
+
+=item C<< pattern ( $node ) >>
+
+Returns the formula as an RDF::Trine::Pattern.
+
+=item C<< forAll >>
+
+Returns the a list of nodes with the @forAll quantifier.
+
+This is a fairly obscure bit of N3 semantics.
+
+=item C<< forSome >>
+
+Returns the a list of nodes with the @forSome quantifier.
+
+This is a fairly obscure bit of N3 semantics.
+
+=item C<< as_literal_notation >>
+
+Returns the formula in Notation-3-like syntax, excluding the wrapping "{"..."}".
+
+Uses absolute URIs whenever possible, avoiding relative URI references,
+QNames and keywords.
+
+=item C<< from_literal_notation ( $string, $base ) >>
+
+Modifies the formula's value using Notation 3 syntax, excluding the wrapping "{"..."}".
+
+=item C<< equal ( $node ) >>
+
+Returns true if the two nodes are equal, false otherwise.
+
+TODO - really need a "not equal, but equivalent" method.
+
+=back
+
+=head1 BUGS
+
+Please report any bugs to
+L<http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3>.
+
+=head1 SEE ALSO
+
+L<RDF::Trine::Node>,
+L<RDF::Trine::Pattern>.
 
 =head1 AUTHOR
 
@@ -246,7 +237,7 @@ Based on RDF::Trine::Node::Literal by Gregory Todd Williams.
 
 Copyright (c) 2006-2010 Gregory Todd Williams. 
 
-Copyright (c) 2010-2011 Toby Inkster.
+Copyright (c) 2010-2012 Toby Inkster.
 
 This library is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
