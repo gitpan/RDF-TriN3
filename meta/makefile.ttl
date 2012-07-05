@@ -12,6 +12,7 @@
 		"parent" ,
 		"Data::UUID" ,
 		"RDF::Trine 0.135" ,
+		"RDF::NS::Trine",
 		"Scalar::Util" ,
 		"LWP::UserAgent" .
 

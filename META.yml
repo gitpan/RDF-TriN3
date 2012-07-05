@@ -8,7 +8,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.59
 distribution_type: module
-dynamic_config: 1
+dynamic_config: 0
 generated_by: 'Module::Install version 1.06'
 keywords:
   - N3
@@ -31,6 +31,7 @@ no_index:
 requires:
   Data::UUID: 0
   LWP::UserAgent: 0
+  RDF::NS::Trine: 0
   RDF::Trine: 0.135
   Scalar::Util: 0
   parent: 0
@@ -40,4 +41,4 @@ resources:
   homepage: https://metacpan.org/release/RDF-TriN3
   license: http://dev.perl.org/licenses/
   repository: http://goddamn.co.uk/svn-web/perlmods/browse/RDF-TriN3/
-version: 0.200
+version: 0.201

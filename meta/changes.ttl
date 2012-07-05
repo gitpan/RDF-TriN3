@@ -82,3 +82,16 @@ my:v_0-200
 		dcs:item   [ rdfs:label "Copyright 2012."@en ; a dcs:Documentation ]
 	] .
 		
+my:project :release my:v_0-201 .
+my:v_0-201
+	a               :Version ;
+	dc:issued       "2012-07-05"^^xsd:date ;
+	:revision       "0.201"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.201.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_1-000 ;
+	dcs:changeset [
+		dcs:versus my:v_0-200 ;
+		dcs:item   [ rdfs:label "Note the RDF::NS::Trine dependency."@en ; a dcs:Packaging, dcs:Bugfix ];
+	] .
+		

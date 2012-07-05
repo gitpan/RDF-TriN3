@@ -13,7 +13,7 @@ use Scalar::Util qw(blessed);
 
 our ($VERSION);
 BEGIN {
-	$VERSION	= '0.200';
+	$VERSION	= '0.201';
 }
 
 sub new {

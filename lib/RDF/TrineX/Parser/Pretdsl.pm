@@ -1,7 +1,7 @@
 package RDF::TrineX::Parser::Pretdsl;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.200';
+our $VERSION   = '0.201';
 
 our $PROFILE = <<'PRETDSL_PROFILE';
 

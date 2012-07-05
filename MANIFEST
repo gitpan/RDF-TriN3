@@ -21,6 +21,7 @@ inc/Module/Package.pm
 inc/Module/Package/Dist/RDF.pm
 inc/Scalar/Util.pm
 inc/unicore/Name.pm
+inc/utf8.pm
 inc/YAML/Tiny.pm
 lib/RDF/TriN3.pm
 lib/RDF/Trine/Node/Formula.pm
