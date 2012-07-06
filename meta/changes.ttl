@@ -94,4 +94,17 @@ my:v_0-201
 		dcs:versus my:v_0-200 ;
 		dcs:item   [ rdfs:label "Note the RDF::NS::Trine dependency."@en ; a dcs:Packaging, dcs:Bugfix ];
 	] .
+
+my:project :release my:v_0-202 .
+my:v_0-202
+	a               :Version ;
+	dc:issued       "2012-07-06"^^xsd:date ;
+	:revision       "0.202"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.202.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_1-000 ;
+	dcs:changeset [
+		dcs:versus my:v_0-201 ;
+		dcs:item   [ rdfs:label "Note the Module::Runtime and namespace::clean dependencies."@en ; a dcs:Packaging, dcs:Bugfix ];
+	] .
 		

@@ -6,6 +6,11 @@ Home page:    <https://metacpan.org/release/RDF-TriN3>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.202  2012-07-06
+
+ - (Bugfix Packaging) Note the Module::Runtime and namespace::clean
+   dependencies.
+
 0.201  2012-07-05
 
  - (Bugfix Packaging) Note the RDF::NS::Trine dependency.

@@ -10,10 +10,14 @@
 		"Test::More 0.61" ;
 	:requires 
 		"parent" ,
+		"Module::Runtime",
+		"namespace::clean",
 		"Data::UUID" ,
-		"RDF::Trine 0.135" ,
+		"RDF::Trine 0.135" , "Log::Log4perl",
+		"URI", "URI::Escape",
 		"RDF::NS::Trine",
 		"Scalar::Util" ,
+		"Encode",
 		"LWP::UserAgent" .
 
 _:main <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/RDF/TriN3.pm" .
