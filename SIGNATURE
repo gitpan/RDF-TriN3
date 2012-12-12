@@ -14,11 +14,13 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 69df6cbada6b5d9c26e60bd676d36a2ecb86f777 Changes
+SHA1 c87ba08d813adea85177b073be7e060f849a368c COPYRIGHT
+SHA1 8024e217a3bc0536441f81407c1c0000ba9df4f6 Changes
+SHA1 58e47fed556f626572681c48158a3ecd44ce179d HACKING
 SHA1 cc087c3dd6e1b519c680e68cd0231735a68300a0 LICENSE
-SHA1 6c1713d716d7fdfbb23c4131a4cabbe54dd80d5d MANIFEST
-SHA1 8348a95a659969eb99d10b9733af01e0685d2571 META.yml
-SHA1 5391cc35db658809505db2be59d47aa2f073c376 Makefile.PL
+SHA1 ddf2c45f7e970ce88c3ec1c9fd42d48a835fdab2 MANIFEST
+SHA1 32b9327c8b162d3b4a3d92d0f14b9f83027b873a META.yml
+SHA1 0b0e56610f6dd28e0a80f130123c0bee23c209b9 Makefile.PL
 SHA1 c3aeeeec28868cefab58e6c61cda9b53690fb2d7 README
 SHA1 5631f874b4a661510eb6fd2cd4de7cae346835c1 examples/microturtle.pl
 SHA1 68949aff2269759850a4cddc73516621ea97f1eb examples/pretdsl.pl
@@ -39,18 +41,18 @@ SHA1 9de7b5129351499c048328dfa718d0eab557cf30 inc/Module/Install/TrustMetaYml.pm
 SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
 SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
 SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
-SHA1 8d909d81d2f98514d42f67a972a489ff624a4183 inc/Module/Package/Dist/RDF.pm
+SHA1 c18deb3025b83dda8ac7c97f1e29599e1d2c7378 inc/Module/Package/Dist/RDF.pm
 SHA1 0e0eed2e69d9583081868cf4f220068d0a018568 inc/Scalar/Util.pm
 SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
 SHA1 8105c0510a773b56840995fb4dd2dc64fe9ddaee inc/unicore/Name.pm
 SHA1 36df501c7c9b73c282c5174ed54d8283b2f2cbf2 inc/utf8.pm
-SHA1 ea3c1a1cdbafd423079f080a750d81a9c5ef83d9 lib/RDF/TriN3.pm
-SHA1 fb4a413eeb9661da6e249397909632340443dc22 lib/RDF/Trine/Node/Formula.pm
-SHA1 e04a1df9462055226f1e3b267d47e14385b05ce0 lib/RDF/Trine/Parser/Notation3.pm
-SHA1 99380332e8577c148cd1cd49133a3745a800eecd lib/RDF/Trine/Parser/ShorthandRDF.pm
-SHA1 f8ec047a9eb2a416b74227672559b1188c0c00f2 lib/RDF/Trine/Serializer/Notation3.pm
-SHA1 371d8b5a5da137cdccf8706150fe52d60d9cabfc lib/RDF/TrineX/Parser/Pretdsl.pm
-SHA1 d1517ba0d26ed65520b06ae872ca8d33f09daad4 meta/changes.ttl
+SHA1 f2ef95390b402e8c0f9c7faf0b89b870d91daf11 lib/RDF/TriN3.pm
+SHA1 798de21f162206e908981a8c1d9fe38b5c185fe2 lib/RDF/Trine/Node/Formula.pm
+SHA1 54d50abfd51912d0d32566ae15218c99d3360586 lib/RDF/Trine/Parser/Notation3.pm
+SHA1 8a32badf6105b5cf9953d97ce2affca6ebb82a80 lib/RDF/Trine/Parser/ShorthandRDF.pm
+SHA1 280c2b0eebca87ec5ae1917c1a844c0ff64570f5 lib/RDF/Trine/Serializer/Notation3.pm
+SHA1 6cbfa18dc312c35118803b09a25f7440ca1d4861 lib/RDF/TrineX/Parser/Pretdsl.pm
+SHA1 126ef1de0889914ab3d01b4daa71ac729a967b35 meta/changes.ttl
 SHA1 ddfefa6c35ec051634b93d7c4b5604c5de631363 meta/doap.ttl
 SHA1 76cacb5d05202d44a34b31a1f31334ee646a9101 meta/makefile.ttl
 SHA1 48bb58ead95bd87fe3119190b10cd82dcf8ac09c t/01basic.t
@@ -59,7 +61,7 @@ SHA1 176ea1c966e931a622b8517bd7ba485aa8acf346 t/03shorthandrdf.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk/2LBQACgkQzr+BKGoqfTmh0QCfYgZDSxj2rHCFq3QzgChS7xSs
-0BoAoLgFr8/tlBT07XrWJb0lfsFbFK9B
-=GfUm
+iEYEARECAAYFAlDIsIcACgkQzr+BKGoqfTnvCgCcDGoZggOvpPO7OOAPynbR8PwO
+hP0An2WRoaATWzS/+g5oM6TKwAGtacpI
+=rTup
 -----END PGP SIGNATURE-----

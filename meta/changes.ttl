@@ -108,3 +108,16 @@ my:v_0-202
 		dcs:item   [ rdfs:label "Note the Module::Runtime and namespace::clean dependencies."@en ; a dcs:Packaging, dcs:Bugfix ];
 	] .
 		
+my:project :release my:v_0-203 .
+my:v_0-203
+	a               :Version ;
+	dc:issued       "2012-12-12"^^xsd:date ;
+	:revision       "0.203"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.203.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_1-001 ;
+	dcs:changeset [
+		dcs:versus my:v_0-202 ;
+		dcs:item   [ rdfs:label "Drop last dependency on onsolete version of RDF::Trine::Parser::Turtle."@en ; a dcs:Bugfix ];
+	] .
+		

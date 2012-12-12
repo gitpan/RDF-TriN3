@@ -1,8 +1,10 @@
 Changes
+COPYRIGHT
 examples/microturtle.pl
 examples/pretdsl.pl
 examples/shorthand-rdf.pl
 examples/vcard_ttl.pl
+HACKING
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm

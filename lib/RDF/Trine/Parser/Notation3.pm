@@ -25,7 +25,7 @@ our ($VERSION, $AUTHORITY);
 
 BEGIN 
 {
-	$VERSION   = '0.202';
+	$VERSION   = '0.203';
 	$AUTHORITY = 'cpan:TOBYINK';
 }
 
@@ -1167,11 +1167,11 @@ sub _resource_test {
 	my $self	= shift;
 	return 0 unless (length($self->{tokens}));
 	return 0 if $self->{tokens} =~ m/^(true|false)\b/;
-	if ($self->{tokens} =~ m/^${RDF::Trine::Parser::Turtle::r_resource_test}/) {
+	if ($self->{tokens} =~ m/^${r_resource_test}/) {
 		return 1;
 	} elsif (defined $self->{'keywords'}
-		&& $self->{'tokens'} =~ m/^${RDF::Trine::Parser::Turtle::r_prefixName}/ 
-		&& $self->{'tokens'} !~ m/^${RDF::Trine::Parser::Turtle::r_qname}/) {
+		&& $self->{'tokens'} =~ m/^${r_prefixName}/ 
+		&& $self->{'tokens'} !~ m/^${r_qname}/) {
 		return 1;
 	} else {
 		return 0;
@@ -1183,8 +1183,8 @@ sub _resource {
 	if ($self->_uriref_test()) {
 		return $self->__URI($self->_uriref(), $self->{baseURI});
 	} elsif (defined $self->{'keywords'}
-		&& $self->{'tokens'} =~ m/^${RDF::Trine::Parser::Turtle::r_prefixName}/ 
-		&& $self->{'tokens'} !~ m/^${RDF::Trine::Parser::Turtle::r_qname}/) {
+		&& $self->{'tokens'} =~ m/^${r_prefixName}/ 
+		&& $self->{'tokens'} !~ m/^${r_qname}/) {
 		my $name = $self->_name();
 		if (grep { lc $name eq lc $_ } @{$self->{'keywords'}})
 		{
