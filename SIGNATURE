@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.70.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,12 +14,14 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 c87ba08d813adea85177b073be7e060f849a368c COPYRIGHT
-SHA1 8024e217a3bc0536441f81407c1c0000ba9df4f6 Changes
-SHA1 58e47fed556f626572681c48158a3ecd44ce179d HACKING
-SHA1 cc087c3dd6e1b519c680e68cd0231735a68300a0 LICENSE
-SHA1 ddf2c45f7e970ce88c3ec1c9fd42d48a835fdab2 MANIFEST
-SHA1 32b9327c8b162d3b4a3d92d0f14b9f83027b873a META.yml
+SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
+SHA1 566d7b3464e2cf0dacd0b63f2605406831018b30 COPYRIGHT
+SHA1 47d579fe59012339100575f5eb64833086a25c39 CREDITS
+SHA1 139608c35430a7419873e73dc77aae139992b67f Changes
+SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
+SHA1 14dafbda547ae2324d2941a5e129010193614d0e MANIFEST
+SHA1 aa878947a1b13bc1dc999d2214f88321ac38cb83 META.ttl
+SHA1 028f066797c794a801d38ee5eaa03dda51bb62c6 META.yml
 SHA1 0b0e56610f6dd28e0a80f130123c0bee23c209b9 Makefile.PL
 SHA1 c3aeeeec28868cefab58e6c61cda9b53690fb2d7 README
 SHA1 5631f874b4a661510eb6fd2cd4de7cae346835c1 examples/microturtle.pl
@@ -37,31 +39,28 @@ SHA1 66d3d335a03492583a3be121a7d888f63f08412c inc/Module/Install/Include.pm
 SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
 SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
 SHA1 3b9281ddf7dd6d6f5de0a9642c69333023193c80 inc/Module/Install/Package.pm
-SHA1 9de7b5129351499c048328dfa718d0eab557cf30 inc/Module/Install/TrustMetaYml.pm
+SHA1 41f76ff6b39368a65da86377e43b34bacc2fb0eb inc/Module/Install/TrustMetaYml.pm
 SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
 SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
 SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
-SHA1 c18deb3025b83dda8ac7c97f1e29599e1d2c7378 inc/Module/Package/Dist/RDF.pm
-SHA1 0e0eed2e69d9583081868cf4f220068d0a018568 inc/Scalar/Util.pm
+SHA1 5a2f84a7a82eee0d1e5ed3628fe503a608efc10f inc/Module/Package/Dist/RDF.pm
 SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
-SHA1 8105c0510a773b56840995fb4dd2dc64fe9ddaee inc/unicore/Name.pm
-SHA1 36df501c7c9b73c282c5174ed54d8283b2f2cbf2 inc/utf8.pm
-SHA1 f2ef95390b402e8c0f9c7faf0b89b870d91daf11 lib/RDF/TriN3.pm
-SHA1 798de21f162206e908981a8c1d9fe38b5c185fe2 lib/RDF/Trine/Node/Formula.pm
-SHA1 54d50abfd51912d0d32566ae15218c99d3360586 lib/RDF/Trine/Parser/Notation3.pm
-SHA1 8a32badf6105b5cf9953d97ce2affca6ebb82a80 lib/RDF/Trine/Parser/ShorthandRDF.pm
-SHA1 280c2b0eebca87ec5ae1917c1a844c0ff64570f5 lib/RDF/Trine/Serializer/Notation3.pm
-SHA1 6cbfa18dc312c35118803b09a25f7440ca1d4861 lib/RDF/TrineX/Parser/Pretdsl.pm
-SHA1 126ef1de0889914ab3d01b4daa71ac729a967b35 meta/changes.ttl
+SHA1 8377021f175a803f3be5d747db749656eef0d0bf lib/RDF/TriN3.pm
+SHA1 661332745d70d036b8e29a34eb157e05d9796f96 lib/RDF/Trine/Node/Formula.pm
+SHA1 b26eb6fdbaa5e5cd3f5c918700db78cfad5f7d0c lib/RDF/Trine/Parser/Notation3.pm
+SHA1 81c719f707f47bf73de2261f474fe244d339bc00 lib/RDF/Trine/Parser/ShorthandRDF.pm
+SHA1 5ac94159a159ef4b2efb3bec5086eebb1e0bd548 lib/RDF/Trine/Serializer/Notation3.pm
+SHA1 0dfc30830ec8af3741da76792051d50072bd4d9f lib/RDF/TrineX/Parser/Pretdsl.pm
+SHA1 81f07182cbb06a0ca8ab240634070d171a17b4e6 meta/changes.ttl
 SHA1 ddfefa6c35ec051634b93d7c4b5604c5de631363 meta/doap.ttl
 SHA1 76cacb5d05202d44a34b31a1f31334ee646a9101 meta/makefile.ttl
 SHA1 48bb58ead95bd87fe3119190b10cd82dcf8ac09c t/01basic.t
 SHA1 761d677d9e49563ed84bed339289a4ef06cc5f3c t/02dbi.t
 SHA1 176ea1c966e931a622b8517bd7ba485aa8acf346 t/03shorthandrdf.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.10 (GNU/Linux)
+Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAlDIsIcACgkQzr+BKGoqfTnvCgCcDGoZggOvpPO7OOAPynbR8PwO
-hP0An2WRoaATWzS/+g5oM6TKwAGtacpI
-=rTup
+iEYEARECAAYFAlHmt/EACgkQzr+BKGoqfTmIvgCfXUFPC1UP8Kiqzz2TJ5Q84E7O
+J/0AnigCWcSbe/llRmFDTUQIad4DiNMR
+=3OOy
 -----END PGP SIGNATURE-----

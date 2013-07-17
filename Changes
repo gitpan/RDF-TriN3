@@ -6,9 +6,15 @@ Home page:    <https://metacpan.org/release/RDF-TriN3>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-TriN3>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.204  2013-07-17
+
+ - (Bugfix) Eliminate uninitialized warnings from
+   RDF::TrineX::Parser::Pretdsl.
+ - (Bugfix) Fix spelling of 'Regression' data type in Pretdsl profile.
+
 0.203  2012-12-12
 
- - (Bugfix) Drop last dependency on onsolete version of
+ - (Bugfix) Drop last dependency on obsolete version of
    RDF::Trine::Parser::Turtle.
 
 0.202  2012-07-06

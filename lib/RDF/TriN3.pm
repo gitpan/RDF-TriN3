@@ -7,7 +7,7 @@ use RDF::Trine::Parser::Notation3;
 use RDF::Trine::Parser::ShorthandRDF;
 use RDF::Trine::Serializer::Notation3;
 
-our $VERSION = '0.203';
+our $VERSION = '0.204';
 
 1;
 

@@ -1,7 +1,11 @@
 package RDF::TrineX::Parser::Pretdsl;
 
+use strict;
+use warnings;
+no warnings qw( void once uninitialized numeric );
+
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.203';
+our $VERSION   = '0.204';
 
 our $PROFILE = <<'PRETDSL_PROFILE';
 
@@ -114,7 +118,7 @@ our $PROFILE = <<'PRETDSL_PROFILE';
 @term Change              pretdsl-dt:Change .
 @term Documentation       pretdsl-dt:Documentation .
 @term Packaging           pretdsl-dt:Packaging .
-@term Regresion           pretdsl-dt:Regression .
+@term Regression          pretdsl-dt:Regression .
 @term Removal             pretdsl-dt:Removal .
 @term SecurityFix         pretdsl-dt:SecurityFix .
 @term SecurityRegression  pretdsl-dt:SecurityRegression .

@@ -118,6 +118,20 @@ my:v_0-203
 	                trine:v_1-001 ;
 	dcs:changeset [
 		dcs:versus my:v_0-202 ;
-		dcs:item   [ rdfs:label "Drop last dependency on onsolete version of RDF::Trine::Parser::Turtle."@en ; a dcs:Bugfix ];
+		dcs:item   [ rdfs:label "Drop last dependency on obsolete version of RDF::Trine::Parser::Turtle."@en ; a dcs:Bugfix ];
+	] .
+		
+my:project :release my:v_0-204 .
+my:v_0-204
+	a               :Version ;
+	dc:issued       "2013-07-17"^^xsd:date ;
+	:revision       "0.204"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.204.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_1-006 ;
+	dcs:changeset [
+		dcs:versus my:v_0-203 ;
+		dcs:item   [ rdfs:label "Eliminate uninitialized warnings from RDF::TrineX::Parser::Pretdsl."@en ; a dcs:Bugfix ];
+		dcs:item   [ rdfs:label "Fix spelling of 'Regression' data type in Pretdsl profile."@en ; a dcs:Bugfix ];
 	] .
 		

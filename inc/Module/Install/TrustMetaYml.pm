@@ -6,7 +6,7 @@ use strict;
 
 BEGIN {
 	$Module::Install::TrustMetaYml::AUTHORITY = 'cpan:TOBYINK';
-	$Module::Install::TrustMetaYml::VERSION   = '0.002';
+	$Module::Install::TrustMetaYml::VERSION   = '0.003';
 }
 
 use base qw(Module::Install::Base);
@@ -18,7 +18,7 @@ sub trust_meta_yml
 
 	$self->perl_version('5.005') unless defined $self->perl_version;
 	
-	$self->include_deps('YAML::Tiny', 0);
+	$self->include('YAML::Tiny', 0);
 	return $self if $self->is_admin;
 
 	require YAML::Tiny;
