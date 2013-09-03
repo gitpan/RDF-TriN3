@@ -53,6 +53,7 @@ dist:project
 	doap:release      dist:v_0-202;
 	doap:release      dist:v_0-203;
 	doap:release      dist:v_0-204;
+	doap:release      dist:v_0-205;
 	doap:repository   [
 		a doap:SVNRepository;
 		doap:browse <http://goddamn.co.uk/svn-web/perlmods/browse/RDF-TriN3/>;
@@ -217,6 +218,20 @@ dist:v_0-204
 	];
 	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.204.tar.gz>;
 	doap:revision     "0.204"^^xsd:string.
+
+dist:v_0-205
+	a                 doap:Version;
+	cpant:compatible_with rdf-trine:v_1-006;
+	dc:issued         "2013-09-03"^^xsd:date;
+	dcs:changeset     [
+		dcs:item [
+			a dcs:Update;
+			rdfs:label "Add the 'deps' prefix, and 'BackCompat' and 'Tests' keywords to Pretdsl."@en;
+		];
+		dcs:versus dist:v_0-204;
+	];
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.205.tar.gz>;
+	doap:revision     "0.205"^^xsd:string.
 
 <http://tobyinkster.co.uk/#i>
 	a                 foaf:Person;

@@ -5,7 +5,7 @@ use warnings;
 no warnings qw( void once uninitialized numeric );
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.204';
+our $VERSION   = '0.205';
 
 our $PROFILE = <<'PRETDSL_PROFILE';
 
@@ -43,6 +43,7 @@ our $PROFILE = <<'PRETDSL_PROFILE';
 @prefix cpant:       <http://purl.org/NET/cpan-uri/terms#>.
 @prefix dbug:        <http://ontologi.es/doap-bugs#> .
 @prefix dcs:         <http://ontologi.es/doap-changeset#> .
+@prefix deps:        <http://ontologi.es/doap-deps#> .
 @prefix doap:        <http://usefulinc.com/ns/doap#> .
 @prefix earl:        <http://www.w3.org/ns/earl#> .
 @prefix nfo:         <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
@@ -114,6 +115,7 @@ our $PROFILE = <<'PRETDSL_PROFILE';
 
 # Changelog datatypes
 @term Addition            pretdsl-dt:Addition .
+@term BackCompat          pretdsl-dt:BackCompat .
 @term Bugfix              pretdsl-dt:Bugfix .
 @term Change              pretdsl-dt:Change .
 @term Documentation       pretdsl-dt:Documentation .
@@ -122,6 +124,7 @@ our $PROFILE = <<'PRETDSL_PROFILE';
 @term Removal             pretdsl-dt:Removal .
 @term SecurityFix         pretdsl-dt:SecurityFix .
 @term SecurityRegression  pretdsl-dt:SecurityRegression .
+@term Tests               pretdsl-dt:Tests .
 @term Update              pretdsl-dt:Update .
 
 PRETDSL_PROFILE
@@ -413,6 +416,7 @@ declare them, or redeclare them to be something else if you prefer...)
 	@prefix cpant:       <http://purl.org/NET/cpan-uri/terms#>.
 	@prefix dbug:        <http://ontologi.es/doap-bugs#> .
 	@prefix dcs:         <http://ontologi.es/doap-changeset#> .
+	@prefix deps:        <http://ontologi.es/doap-deps#> .
 	@prefix doap:        <http://usefulinc.com/ns/doap#> .
 	@prefix earl:        <http://www.w3.org/ns/earl#> .
 	@prefix nfo:         <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
@@ -455,6 +459,7 @@ Pretdsl defines some terms:
 
 	# Changelog datatypes
 	@term Addition            pretdsl-dt:Addition .
+	@term BackCompat          pretdsl-dt:BackCompat .
 	@term Bugfix              pretdsl-dt:Bugfix .
 	@term Change              pretdsl-dt:Change .
 	@term Documentation       pretdsl-dt:Documentation .
@@ -463,6 +468,7 @@ Pretdsl defines some terms:
 	@term Removal             pretdsl-dt:Removal .
 	@term SecurityFix         pretdsl-dt:SecurityFix .
 	@term SecurityRegression  pretdsl-dt:SecurityRegression .
+	@term Tests               pretdsl-dt:Tests .
 	@term Update              pretdsl-dt:Update .
 
 =head3 XSD datatype shorthands

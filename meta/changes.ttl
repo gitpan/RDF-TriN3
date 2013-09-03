@@ -135,3 +135,16 @@ my:v_0-204
 		dcs:item   [ rdfs:label "Fix spelling of 'Regression' data type in Pretdsl profile."@en ; a dcs:Bugfix ];
 	] .
 		
+my:project :release my:v_0-205 .
+my:v_0-205
+	a               :Version ;
+	dc:issued       "2013-09-03"^^xsd:date ;
+	:revision       "0.205"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.205.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_1-006 ;
+	dcs:changeset [
+		dcs:versus my:v_0-204 ;
+		dcs:item   [ rdfs:label "Add the 'deps' prefix, and 'BackCompat' and 'Tests' keywords to Pretdsl."@en ; a dcs:Update ];
+	] .
+		
