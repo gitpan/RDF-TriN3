@@ -5,7 +5,7 @@ use warnings;
 no warnings qw( void once uninitialized numeric );
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.205';
+our $VERSION   = '0.206';
 
 our $PROFILE = <<'PRETDSL_PROFILE';
 
@@ -333,8 +333,8 @@ _CB_
 } 'RtBug';
 
 foreach my $change_type (qw(
-	Addition Bugfix Change Documentation Packaging Regression
-	Removal SecurityFix SecurityRegression Update
+	Addition BackCompat Bugfix Change Documentation Packaging Regression
+	Removal SecurityFix SecurityRegression Tests Update
 ))
 {
 	_CB_

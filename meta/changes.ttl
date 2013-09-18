@@ -148,3 +148,16 @@ my:v_0-205
 		dcs:item   [ rdfs:label "Add the 'deps' prefix, and 'BackCompat' and 'Tests' keywords to Pretdsl."@en ; a dcs:Update ];
 	] .
 		
+my:project :release my:v_0-206 .
+my:v_0-206
+	a               :Version ;
+	dc:issued       "2013-09-18"^^xsd:date ;
+	:revision       "0.206"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-TriN3-0.206.tar.gz> ;
+	cpant:compatible_with
+	                trine:v_1-006 ;
+	dcs:changeset [
+		dcs:versus my:v_0-205 ;
+		dcs:item   [ rdfs:label "Fix for 'BackCompat' and 'Tests' keywords in Pretdsl."@en ; a dcs:Bugfix ];
+	] .
+		
